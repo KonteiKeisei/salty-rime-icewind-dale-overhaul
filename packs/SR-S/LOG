@@ -1,0 +1,8 @@
+2025/06/13-15:33:08.838 af8 Recovering log #4
+2025/06/13-15:33:08.855 af8 Delete type=0 #4
+2025/06/13-15:33:08.855 af8 Delete type=3 #2
+2025/06/13-15:34:41.157 1858 Level-0 table #9: started
+2025/06/13-15:34:41.157 1858 Level-0 table #9: 0 bytes OK
+2025/06/13-15:34:41.157 1858 Delete type=0 #7
+2025/06/13-15:34:41.350 1858 Manual compaction at level-0 from '!scenes!0FyKusCcoAXdc9vB' @ 72057594037927935 : 1 .. '!scenes.walls!0FyKusCcoAXdc9vB.zzK1Kka4BV3m2Cx8' @ 0 : 0; will stop at (end)
+2025/06/13-15:34:41.350 1858 Manual compaction at level-1 from '!scenes!0FyKusCcoAXdc9vB' @ 72057594037927935 : 1 .. '!scenes.walls!0FyKusCcoAXdc9vB.zzK1Kka4BV3m2Cx8' @ 0 : 0; will stop at (end)

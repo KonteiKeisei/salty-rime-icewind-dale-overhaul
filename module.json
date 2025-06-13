@@ -1,0 +1,78 @@
+{
+  "id": "salty-rime-icewind-dale-overhaul",
+  "title": "Salty Rime - Icewind Dale Overhaul",
+  "version": "1.0.0",
+  "compatibility": {
+    "minimum": "12",
+    "verified": "12",
+    "maximum": "12"
+  },
+  "relationships": {
+    "requires": [
+      {
+        "id": "betterroofs",
+        "type": "module",
+        "compatibility": {}
+      },
+      {
+        "id": "tile-zoom-fader",
+        "type": "module",
+        "compatibility": {}
+      },
+      {
+        "id": "wall-height",
+        "type": "module",
+        "compatibility": {}
+      }
+    ],
+    "recommends": [
+      {
+        "id": "about-time",
+        "type": "module",
+        "compatibility": {}
+      },
+      {
+        "id": "levels",
+        "type": "module",
+        "compatibility": {}
+      },
+      {
+        "id": "day-night-cycle",
+        "type": "module",
+        "compatibility": {}
+      },
+      {
+        "id": "foundryvtt-simple-calendar",
+        "type": "module",
+        "compatibility": {}
+      },
+      {
+        "id": "simple-weather",
+        "type": "module",
+        "compatibility": {}
+      }
+    ]
+  },
+  "authors": [
+    {
+      "name": "SaltyJ",
+      "email": "konteikeisei@gmail.com",
+      "discord": ".jakekeisei",
+      "flags": {}
+    }
+  ],
+  "packs": [
+    {
+      "name": "SR-S",
+      "label": "Salty Rime Scenes",
+      "path": "packs/SR-S",
+      "type": "Scene",
+      "ownership": {
+        "PLAYER": "OBSERVER",
+        "ASSISTANT": "OWNER"
+      },
+      "system": "dnd5e",
+      "flags": {}
+    }
+  ]
+}
