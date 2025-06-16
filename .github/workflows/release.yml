@@ -1,0 +1,38 @@
+name: Create FoundryVTT Release
+
+on:
+  push:
+    tags:
+      - 'v*.*.*'
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Set release version
+        id: vars
+        run: |
+          echo "RELEASE_VERSION=${GITHUB_REF#refs/tags/v}" >> $GITHUB_ENV
+
+      - name: Update module.json version and download fields
+        run: |
+          sed -i 's|"version": *".*"|"version": "'$RELEASE_VERSION'"|' module.json
+          sed -i 's|"download": *".*"|"download": "https://github.com/'${{ github.repository }}'/releases/download/v'${RELEASE_VERSION}'/module.zip"|' module.json
+
+      - name: Zip module files
+        run: |
+          mkdir zipdir
+          cp -r * zipdir/
+          cd zipdir
+          zip -r ../module.zip . -x "*.git*" ".github/*"
+          cd ..
+
+      - name: Create Release
+        uses: softprops/action-gh-release@v2
+        with:
+          tag_name: v${{ env.RELEASE_VERSION }}
+          name: v${{ env.RELEASE_VERSION }}
